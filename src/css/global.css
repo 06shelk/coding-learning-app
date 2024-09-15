@@ -1,0 +1,50 @@
+:root{
+    --first-color: #659980;
+    --second-color: #2C417E;
+    --body-color: #ffffff;
+
+    --yellow1: rgba(255, 214, 1, 0.25);
+    --yellow2: #F8D581;
+    --black: #000000;
+    --black2: #404040;
+    --gray1: #E1DEE6;
+    --gray2: #E7E7E7;
+    --gray3: #C6C6C6;
+    --gray4: #F0F0F0;
+    --gray5: #696969;
+    --gray6: #ccc;
+    --redColor: #FF3C3C;
+    
+}
+
+@font-face {
+	font-family: 'Pretendard Variable';
+	font-weight: 45 920;
+	font-style: normal;
+	font-display: swap;
+	src: url('../Data/PretendardVariable.woff2') format('woff2-variations');
+}
+
+/* 폰트 적용 */
+h1, h2, h3, h4, h5, h6, p, li, span, div, td {
+    font-family: 'Pretendard Variable';
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: var(--black);
+    text-decoration-line: none;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
