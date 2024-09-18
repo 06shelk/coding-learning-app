@@ -1,20 +1,9 @@
 :root{
-    --first-color: #659980;
-    --second-color: #2C417E;
+    --first-color: #079903;
+    --second-color: #72C865;
     --body-color: #ffffff;
-
-    --yellow1: rgba(255, 214, 1, 0.25);
-    --yellow2: #F8D581;
     --black: #000000;
-    --black2: #404040;
-    --gray1: #E1DEE6;
-    --gray2: #E7E7E7;
-    --gray3: #C6C6C6;
-    --gray4: #F0F0F0;
-    --gray5: #696969;
-    --gray6: #ccc;
-    --redColor: #FF3C3C;
-    
+    --gray1: #888888;
 }
 
 @font-face {
