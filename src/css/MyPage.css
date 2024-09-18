@@ -1,0 +1,184 @@
+.MyPageCon {
+    margin-top: 147px;
+    display: flex;
+}
+
+.MyPageCon > div {
+  padding: 0 32px;
+  border-right: 1px solid #E7E7E7;
+}
+
+.MyPageCon > div:last-child {
+   border: none;
+  }
+  
+
+/* Profile */
+.Profile {
+    width: 428px;
+}
+
+.Profile > h1 {
+    font-size: 40px;
+}
+
+.prof {
+    margin-top: 32px;
+    display: flex;
+    height: 137px;
+    align-items: center;
+}
+
+.proImg {
+    width: 133px;
+    height: 133px;
+    border-radius: 50%;
+    margin-right: 40px;
+}
+
+.prof > div > h3 {
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+
+.prof > div > p {
+    font-size: 15px;
+    color: #777777;
+}
+
+.Profile > div > h4 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.Profile > .review {
+    margin-top: 16px;
+    padding: 24px;
+    border-top: 1px solid #E7E7E7;
+}
+
+.Profile > .lang {
+    padding: 24px;
+}
+
+.Profile > .lang > ul > li {
+    margin-left: 20px;
+    padding-bottom: 8px;
+    list-style-type : square;
+    font-size: 14px;
+}
+
+/* Calendar */
+.Calendar {
+    width: 438px;
+}
+
+.Calendar > h1 {
+    font-size: 40px;
+}
+
+.Calendar > p {
+    margin: 32px 0 8px 36px;
+    font-size: 20px;
+}
+
+.title {
+    display: flex;
+    justify-content: space-between;
+}
+
+.title > div {
+    display: flex;
+}
+
+.left, .right, .month {
+    cursor: pointer;
+}
+
+.clickDay {
+    margin: 0 16px;
+}
+
+.month {
+    width: 60px;
+    height: 23px;
+    border: 1px solid #DDDDDD;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    font-size: 11px;
+}
+
+.titleCont {
+    margin-left: 36px; 
+}
+
+.cal {
+    position: relative;
+    transform:translate(10%, 1.2%);
+    width: calc(437px - 36px);
+}
+
+.weekday.container {
+    display: grid;
+    margin-top: 12px;
+    line-height: 53px;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+    height: 53px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.dates.container {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    font-size: 12px;
+    color: #212121;
+}
+
+.date.item {
+    padding: 10px;
+    aspect-ratio: 1/1;  /* 1:1 비율 */
+    display: grid;  /* 글자 수평, 수직 가운데로 */
+    place-items: center; /* 글자 수평, 수직 가운데로 */
+}
+
+
+/* MyProblem */
+.MyProblem {}
+
+.MyProblem > h1 {
+    font-size: 40px;
+}
+
+.MyProblem > p {
+    margin: 32px 0 16px 16px;
+    font-size: 12x;
+}
+
+.proTable {
+    width: 417px;
+    height: 375px;
+    border: 1px solid #E7E7E7;
+}
+
+.line {
+    display: flex;
+    justify-content: space-between;
+    padding: 14px 16px;
+    border-bottom: 1px solid #E7E7E7;
+}
+
+.MyProblem .nextBtn {
+    position: relative;
+    left: calc(417px - 166px);
+    padding: 14px 22px;
+    margin-top: 32px;
+    font-size: 18px;
+    border-radius: 10px;
+    background-color: #212121;
+    color: #FFFFFF;
+}
