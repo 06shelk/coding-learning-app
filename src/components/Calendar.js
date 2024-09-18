@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import left from "../images/ic_left.png";
+import left from "../images/ic_left.svg";
 import right from "../images/ic_right.svg";
 
 const Calendar = () => {

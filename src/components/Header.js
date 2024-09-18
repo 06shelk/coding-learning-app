@@ -1,5 +1,4 @@
 import React from 'react';
-import '../css/global.css';
 import '../css/header.css';
 import { Link } from 'react-router-dom';
 import { con1, con2 } from '../Data/header.js';

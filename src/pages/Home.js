@@ -1,11 +1,21 @@
 import React from 'react'
+import '../css/global.css';
+import Banner from '../components/Banner.js';
 import Header from '../components/Header.js';
+import Search from '../components/Search.js';
+import Problems from '../components/Problems.js';
+import Footer from '../components/Footer.js';
+import '../css/Home.css';
 
 const Home = () => {
   return (
-    <>
+    <div className='Home'>
       <Header />
-    </>
+      <Banner />
+      <Search />
+      <Problems />
+      <Footer/>
+    </div>
   )
 }
 

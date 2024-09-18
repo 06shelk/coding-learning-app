@@ -1,0 +1,100 @@
+.Home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+
+
+/* banner */
+.banner {
+    width: 100vw;
+    height: 660px;
+    background-color: #CBCBCB;
+}
+
+.Search__inner > input {
+    width: calc(1420px - 64px);
+    height: 100px;
+    border-radius: 97px;
+    margin-top: 55px;
+    border: 5px solid var(--first-color);
+    box-shadow: 0 3px 3px 0 rgba(0,0,0,0.30);
+    background: url(../images/ic_search.svg) no-repeat 5px center;
+    background-position: calc(100% - 48px) 50%;
+    font-size: 30px;
+    padding-left: 64px;
+}
+
+.Search__inner > input:focus {
+    border-color: #034101;
+    outline: none;
+  }
+  
+
+
+/* Problems */
+#lang {
+    width: 343px;
+    height: 69px;
+    font-size: 30px;
+    margin: 40px 0;
+    padding-left: 20px;
+    appearance:none;
+    background:url('../images/ic_down.svg') no-repeat right 24px center;
+   
+    border: 2px solid var(--gray1);
+    border-radius: 10px;
+}
+
+.Problems > table {
+    width: 1420px;
+    text-align: center;
+    border-collapse: separate; 
+    border-spacing: 0; 
+    border-radius: 10px; 
+    overflow: hidden; 
+}
+
+tr {
+    border-bottom: 1px solid var(--gray1); 
+  
+}
+
+th {
+    padding: 10px;
+    font-size: 30px;
+    font-weight: 400;
+    background-color: var(--first-color);
+    color: var(--body-color);
+}
+
+td {
+    padding: 25px;
+    text-align: center;
+    color: #212121;
+    font-size: 30px;
+    border-bottom: 1px solid var(--gray1); 
+}
+
+
+.Problems > table > tr > td:nth-child(1), 
+.Problems > table > tr > td:nth-child(3) {
+    width: 15%;
+}
+
+.pages {
+    display: flex;
+    justify-content: center;
+}
+
+.pages > div {
+   margin: 32px 16px;
+   font-size: 30px;
+}
+
+.pages > div > img{
+    width: 13px;
+    cursor: pointer;
+ }
