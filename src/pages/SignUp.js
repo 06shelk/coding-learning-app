@@ -2,7 +2,6 @@ import React from 'react'
 import Header from '../components/Header'
 import styles from '../css/SignUp.module.css';
 
-
 function SignUpForm() {
     return (
       <div id={styles.signUpForm}>

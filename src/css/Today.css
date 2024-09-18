@@ -1,0 +1,64 @@
+.TodayCon {
+   margin-top: 100px;
+}
+
+.TodayCon__inner > div  {
+    display: flex;
+    width: 1420px;
+}
+
+.TodayCon__inner > div:nth-child(1)  {
+   padding-top: 57px;
+}
+
+
+.TodayCon__inner > div:nth-child(1) > select {
+    width: 343px;
+    height: 69px;
+    font-size: 30px;
+    padding-left: 20px;
+    margin-left: 33px;
+    appearance:none;
+    background:url('../images/ic_down.svg') no-repeat right 24px center;
+   
+    border: 2px solid var(--gray1);
+    border-radius: 10px;
+}
+
+
+.todayPros {
+    margin-top: 88px;
+}
+
+.todayPros .todayPro {
+    position: relative;
+    width: 453px;
+    height: 480px;
+    border-radius: 20px;
+    margin: 0 15px;
+    border: 3px solid var(--first-color);
+    padding: 60px 24px;
+}
+
+.todayPros .todayPro h2 {
+    font-size: 24px;
+    margin-bottom: 24px;
+
+}
+
+.todayPros .todayPro p {
+    font-size: 14px;
+
+}
+
+.todayPros .todayPro button {
+    position: absolute;
+    width: 150px;
+    height: 50px;
+    background-color: var(--first-color);
+    color: var(--body-color);
+    border: none;
+    border-radius: 10px;
+    right: 24px;
+    bottom: 32px;
+}

@@ -1,11 +1,12 @@
 import React from 'react'
 import left from "../images/ic_left.svg";
 import right from "../images/ic_right.svg";
+import styles from '../css/Home.module.css';
 
 const Problems = () => {
   return (
-    <div className='Problems'>
-     <select name="languages" id="lang">
+    <div className={styles.Problems}>
+     <select name="languages" className="lang">
         <option value="javascript">JavaScript</option>
         <option value="php">PHP</option>
         <option value="java">Java</option>
@@ -67,7 +68,7 @@ const Problems = () => {
           <td>javascript</td>
         </tr>
       </table>
-      <div className='pages'>
+      <div className={styles.pages}>
           <div><img src={left}/></div>
           <div>1</div>
           <div><img src={right}/></div>

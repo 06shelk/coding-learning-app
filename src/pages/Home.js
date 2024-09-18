@@ -5,11 +5,11 @@ import Header from '../components/Header.js';
 import Search from '../components/Search.js';
 import Problems from '../components/Problems.js';
 import Footer from '../components/Footer.js';
-import '../css/Home.css';
+import styles from '../css/Home.module.css'
 
 const Home = () => {
   return (
-    <div className='Home'>
+    <div className={styles.Home}>
       <Header />
       <Banner />
       <Search />

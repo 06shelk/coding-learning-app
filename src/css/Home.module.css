@@ -1,11 +1,8 @@
 .Home {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    
+    align-items: center;   
 }
-
-
 
 /* banner */
 .banner {
@@ -30,12 +27,10 @@
 .Search__inner > input:focus {
     border-color: #034101;
     outline: none;
-  }
-  
-
+}  
 
 /* Problems */
-#lang {
+.Problems > select {
     width: 343px;
     height: 69px;
     font-size: 30px;
