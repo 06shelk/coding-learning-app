@@ -1,5 +1,6 @@
 import React from 'react'
 import Header from '../components/Header'
+import TodayProblem from '../components/TodayProblem'
 import "../css/Today.css"
 
 function TodayCon() {
@@ -15,21 +16,9 @@ function TodayCon() {
           </select>
         </div>
         <div className='todayPros'>
-          <div className='todayPro todayPro1'>
-            <h2>문자열 출력하기</h2>
-            <p>문자열 str이 주어질 때, str을 출력하는 코드를 작성해 보세요.</p>
-            <button>문제 풀러 가기</button>
-          </div>
-          <div className='todayPro todayPro2'>
-            <h2>문자열 출력하기</h2>
-            <p>문자열 str이 주어질 때, str을 출력하는 코드를 작성해 보세요.</p>
-            <button>문제 풀러 가기</button>
-          </div>
-          <div className='todayPro todayPro3'>
-            <h2>문자열 출력하기</h2>
-            <p>문자열 str이 주어질 때, str을 출력하는 코드를 작성해 보세요.</p>
-            <button>문제 풀러 가기</button>
-          </div>
+          <TodayProblem/>
+          <TodayProblem/>
+          <TodayProblem/>
         </div>
       </div>
     </div>
