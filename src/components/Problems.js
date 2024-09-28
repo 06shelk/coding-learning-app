@@ -7,13 +7,14 @@ import styles from '../css/Home.module.css';
 
 const Problems = () => {
   const [problems, setProblems] = useState([]);
-  const [selectedLanguage, setSelectedLanguage] = useState('JavaScript');
+  const [selectedLanguage, setSelectedLanguage] = useState('javascript'); // 소문자로 변경
   const [difficulty, setDifficulty] = useState('easy'); // 기본 난이도
 
   useEffect(() => {
     const fetchProblems = async () => {
       try {
         const response = await axios.get('http://localhost:4000/api/daily-problems');
+        console.log('Fetched problems:', response.data); // 데이터 확인
         setProblems(response.data); // 전체 문제 데이터 설정
       } catch (error) {
         console.error('문제를 가져오는 데 오류가 발생했습니다:', error);
@@ -24,11 +25,11 @@ const Problems = () => {
   }, []);
 
   const handleLanguageChange = (event) => {
-    setSelectedLanguage(event.target.value);
+    setSelectedLanguage(event.target.value.toLowerCase()); // 소문자로 변환
   };
 
   const renderProblems = () => {
-    const languageProblems = problems[selectedLanguage]?.[difficulty] || [];
+    const languageProblems = problems[selectedLanguage]?.[difficulty] || []; // 소문자로 수정
     return languageProblems.map((problem) => (
       <tr key={problem.id}>
         <td>{problem.id}</td>
@@ -41,9 +42,9 @@ const Problems = () => {
   return (
     <div className={styles.Problems}>
       <select name="languages" className="lang" onChange={handleLanguageChange} value={selectedLanguage}>
-        <option value="JavaScript">JavaScript</option>
-        <option value="Python">Python</option>
-        <option value="Java">Java</option>
+        <option value="javascript">javascript</option> 
+        <option value="python">python</option> 
+        <option value="java">java</option> 
       </select>
       <table>
         <thead>
