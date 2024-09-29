@@ -13,6 +13,7 @@ function Header() {
                 <div className='header__inn1'>
                     <div className="header__logo">
                         <h1>
+                            
                             <a href="/">하루코딩</a>
                         </h1>
                     </div>

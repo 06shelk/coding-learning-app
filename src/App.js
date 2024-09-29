@@ -8,7 +8,7 @@ import SignUp from './pages/SignUp';
 import Today from './pages/Today'; 
 import MyPage from './pages/MyPage'; 
 import ProblemDetail from './pages/ProblemDetail'; 
-
+import PrivateRoute from './components/PrivateRoute';
 
 function App() {
   return (
@@ -20,6 +20,7 @@ function App() {
           <Route path="/Today" element={<Today />} />
           <Route path="/Login" element={<Login />} />
           <Route path="/SignUp" element={<SignUp />} />
+          <Route path="/MyPage" element={<MyPage />} />
           <Route path="/api/problem/:problemId" element={<ProblemDetail />} />
         </Routes>
       </AuthProvider>

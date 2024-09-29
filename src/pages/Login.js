@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Header from '../components/Header';
 import styles from '../css/Login.module.css';
 import { useAuth } from '../contexts/AuthContext'; // AuthContext 가져오기
+import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
 function LoginForm() {
@@ -9,6 +10,7 @@ function LoginForm() {
     const [userid, setUserid] = useState('');
     const [password, setPassword] = useState('');
     const [errorMessage, setErrorMessage] = useState('');
+    const navigate = useNavigate();
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -17,7 +19,8 @@ function LoginForm() {
             const user = { username: response.data.username, token: response.data.token };
             login(user); // 로그인 상태 업데이트
             // 로그인 후 리다이렉트
-            window.location.href = '/'; // 또는 react-router-dom의 useNavigate 사용
+            console.log(user);
+            navigate('/'); 
         } catch (error) {
             console.error('로그인 실패:', error);
             setErrorMessage('로그인 실패. 다시 시도해 주세요.');

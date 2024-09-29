@@ -5,12 +5,14 @@ import axios from 'axios';
 import left from "../images/ic_left.svg";
 import right from "../images/ic_right.svg";
 import styles from '../css/Home.module.css';
+import { useAuth } from '../contexts/AuthContext';
 
 const Problems = () => {
   const [problems, setProblems] = useState([]);
   const [selectedLanguage, setSelectedLanguage] = useState('javascript'); // 소문자로 변경
   const [difficulty, setDifficulty] = useState('easy'); // 기본 난이도
   const navigate = useNavigate(); 
+  const { isLoggedIn } = useAuth();
 
   useEffect(() => {
     const fetchProblems = async () => {
@@ -31,6 +33,13 @@ const Problems = () => {
   };
 
   const handleProblemClick = (problemId) => {
+    console.log('isLoggedIn:', isLoggedIn); 
+    if (!isLoggedIn) {
+      alert("로그인 시 이용할 수 있습니다."); // 로그인하지 않은 경우 경고
+      navigate('/Login'); // 로그인 페이지로 리다이렉트
+      return;
+    }
+
     // 문제 클릭 시 세부 페이지로 이동
     console.log('Clicked problem ID:', problemId); // ID 출력
     navigate(`/api/problem/${problemId}`);

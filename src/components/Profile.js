@@ -1,19 +1,9 @@
 import React, {useEffect, useState, setIsLoggedIn} from 'react'
 import ProfileImg from "../images/Ellipse 4.png"
+import { useAuth } from '../contexts/AuthContext';
 
 const Profile = () => {
-    const [isLoggedIn, setIsLoggedIn] = useState(false); // 로그인 상태 관리
-    const [username, setUsername] = useState(''); // 사용자 이름 상태
-
-    useEffect(() => {
-        // 여기서 로그인 상태를 확인하는 로직을 추가할 수 있습니다.
-        // 예를 들어, 로컬 스토리지에서 토큰을 확인할 수 있습니다.
-        const token = localStorage.getItem('token'); // 토큰이 저장되어 있다고 가정
-        if (token) {
-            setIsLoggedIn(true);
-            setUsername(localStorage.getItem('username')); // 사용자 이름을 로컬 스토리지에서 가져옴
-        }
-    }, []);
+  const { username } = useAuth();
     
   return (
     <div className="Profile">
