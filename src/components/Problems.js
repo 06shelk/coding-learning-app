@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom'; 
 import axios from 'axios';
 
 import left from "../images/ic_left.svg";
@@ -9,6 +10,7 @@ const Problems = () => {
   const [problems, setProblems] = useState([]);
   const [selectedLanguage, setSelectedLanguage] = useState('javascript'); // 소문자로 변경
   const [difficulty, setDifficulty] = useState('easy'); // 기본 난이도
+  const navigate = useNavigate(); 
 
   useEffect(() => {
     const fetchProblems = async () => {
@@ -28,10 +30,17 @@ const Problems = () => {
     setSelectedLanguage(event.target.value.toLowerCase()); // 소문자로 변환
   };
 
+  const handleProblemClick = (problemId) => {
+    // 문제 클릭 시 세부 페이지로 이동
+    console.log('Clicked problem ID:', problemId); // ID 출력
+    navigate(`/api/problem/${problemId}`);
+    
+  };
+
   const renderProblems = () => {
     const languageProblems = problems[selectedLanguage]?.[difficulty] || []; // 소문자로 수정
     return languageProblems.map((problem) => (
-      <tr key={problem.id}>
+      <tr key={problem.id} onClick={() => handleProblemClick(problem.id)} style={{ cursor: 'pointer' }}>
         <td>{problem.id}</td>
         <td>{problem.questionName}</td>
         <td>{selectedLanguage}</td>

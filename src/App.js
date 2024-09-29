@@ -15,13 +15,12 @@ function App() {
     <BrowserRouter>
      
       <AuthProvider>
-      
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/Today" element={<Today />} />
           <Route path="/Login" element={<Login />} />
           <Route path="/SignUp" element={<SignUp />} />
-          <Route path="/ProblemDetail" element={<ProblemDetail />} />
+          <Route path="/api/problem/:problemId" element={<ProblemDetail />} />
         </Routes>
       </AuthProvider>
     </BrowserRouter>
