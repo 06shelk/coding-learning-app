@@ -1,36 +1,20 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
-const TodayProblem = () => {
-  const [problems, setProblems] = useState([]);
+const TodayProblem = ({ problem }) => {
+  const navigate = useNavigate(); // useNavigate 훅 사용
 
-  useEffect(() => {
-    // API에서 문제 데이터 가져오기
-    const fetchProblems = async () => {
-      try {
-        const response = await axios.get('http://localhost:4000/api/daily-problems');
-        setProblems(response.data);
-      } catch (error) {
-        console.error('문제를 가져오는 데 오류가 발생했습니다:', error);
-      }
-    };
-
-    fetchProblems();
-  }, []);
+  const handleProblemClick = () => {
+    navigate(`/api/problem/${problem.id}`); // 해당 문제의 세부 페이지로 이동
+  };
 
   return (
     <div className='todayPro'>
-      {problems.length > 0 ? (
-        problems.map((problem) => (
-          <div key={problem.id}>
-            <h3>{problem.questionName}</h3>
-            <p>{problem.question}</p>
-            <button>문제 풀러 가기</button>
-          </div>
-        ))
-      ) : (
-        <p>문제를 불러오는 중입니다...</p>
-      )}
+      <div key={problem.id}>
+        <h3>{problem.questionName}</h3>
+        <p>{problem.question}</p>
+        <button onClick={handleProblemClick}>문제 풀러 가기</button> {/* 클릭 시 이동 */}
+      </div>
     </div>
   );
 }
