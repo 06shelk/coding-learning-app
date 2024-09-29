@@ -2,7 +2,6 @@ import React from 'react'
 import '../css/global.css';
 import Header from '../components/Header.js';
 import Banner from '../components/Banner.js';
-import Search from '../components/Search.js';
 import Problems from '../components/Problems.js';
 import Footer from '../components/Footer.js';
 import styles from '../css/Home.module.css'
@@ -12,7 +11,6 @@ const Home = () => {
     <div className={styles.Home}>
       <Header/>
       <Banner />
-      <Search />
       <Problems />
       <Footer/>
     </div>

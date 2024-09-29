@@ -11,6 +11,7 @@ const Problems = () => {
   const [problems, setProblems] = useState([]);
   const [selectedLanguage, setSelectedLanguage] = useState('javascript'); // 소문자로 변경
   const [difficulty, setDifficulty] = useState('easy'); // 기본 난이도
+  const [searchTerm, setSearchTerm] = useState(''); // 검색어 상태
   const navigate = useNavigate(); 
   const { isLoggedIn } = useAuth();
 
@@ -46,9 +47,17 @@ const Problems = () => {
     
   };
 
+  const handleSearchChange = (event) => {
+    setSearchTerm(event.target.value); // 검색어 업데이트
+  };
+
   const renderProblems = () => {
     const languageProblems = problems[selectedLanguage]?.[difficulty] || []; // 소문자로 수정
-    return languageProblems.map((problem) => (
+    const filteredProblems = languageProblems.filter(problem => 
+      problem.questionName.toLowerCase().includes(searchTerm.toLowerCase()) // 검색어 필터링
+    );
+
+    return filteredProblems.map((problem) => (
       <tr key={problem.id} onClick={() => handleProblemClick(problem.id)} style={{ cursor: 'pointer' }}>
         <td>{problem.id}</td>
         <td>{problem.questionName}</td>
@@ -59,6 +68,16 @@ const Problems = () => {
 
   return (
     <div className={styles.Problems}>
+      <div id='Search'>
+        <div className={styles.Search__inner}>
+            <input 
+              type="text"
+              placeholder="검색어를 입력하세요" 
+              value={searchTerm} // 검색어 상태 바인딩
+              onChange={handleSearchChange} // 입력 변경 시 호출
+            />
+        </div>
+    </div>
       <select name="languages" className="lang" onChange={handleLanguageChange} value={selectedLanguage}>
         <option value="javascript">javascript</option> 
         <option value="python">python</option> 

@@ -25,7 +25,6 @@
 }
 
 .Search__inner > input:focus {
-    border-color: #034101;
     outline: none;
 }  
 

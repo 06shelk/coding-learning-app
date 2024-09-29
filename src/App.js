@@ -8,7 +8,6 @@ import SignUp from './pages/SignUp';
 import Today from './pages/Today'; 
 import MyPage from './pages/MyPage'; 
 import ProblemDetail from './pages/ProblemDetail'; 
-import PrivateRoute from './components/PrivateRoute';
 
 function App() {
   return (
